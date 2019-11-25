@@ -6,7 +6,7 @@
         <Label text="Schedule"></Label>
     </ActionBar>
 
-    <ListView items="{{ items }}" itemTap="onItemTap">
+    <ListView items="{{ items }}">
         <ListView.itemTemplate>
             <StackLayout orientation="horizontal">
                 <Label text="{{ name }}" textWrap="true"></Label>
