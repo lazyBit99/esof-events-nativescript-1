@@ -2,7 +2,7 @@
     navigatingTo="onNavigatingTo"
     xmlns="http://schemas.nativescript.org/tns.xsd">
 
-    <ActionBar>
+    <ActionBar backgroundColor="#ffce00">
         <Label text="Information"></Label>
     </ActionBar>
 
