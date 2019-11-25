@@ -1,23 +1,23 @@
 const observableModule = require("tns-core-modules/data/observable");
 
-function HomeItemsViewModel() {
+function ScheduleItemsViewModel() {
     const viewModel = observableModule.fromObject({
         items: [
             {
-                name: "Item 1",
-                description: "Description for Item 1"
+                name: "Schedule 1",
+                description: "Schedule for Item 1"
             },
             {
-                name: "Item 2",
-                description: "Description for Item 2"
+                name: "Schedule 2",
+                description: "Schedule for Item 2"
             },
             {
-                name: "Item 3",
-                description: "Description for Item 3"
+                name: "Schedule 3",
+                description: "Schedule for Item 3"
             },
             {
-                name: "Item 4",
-                description: "Description for Item 4"
+                name: "Schedule 4",
+                description: "Schedule for Item 4"
             },
             {
                 name: "Item 5",
@@ -73,4 +73,4 @@ function HomeItemsViewModel() {
     return viewModel;
 }
 
-module.exports = HomeItemsViewModel;
+module.exports = ScheduleItemsViewModel;

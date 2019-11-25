@@ -1,4 +1,4 @@
-const SearchViewModel = require("./search-view-model");
+const SearchViewModel = require("./information-view-model");
 
 function onNavigatingTo(args) {
     const component = args.object;
