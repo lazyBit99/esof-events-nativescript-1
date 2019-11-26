@@ -3,3 +3,13 @@ $scheduleColor: #3880ff;
 ActionBar.schedule {
     background-color: $scheduleColor;
 }
+
+.border-list {
+    border-left-width: 3;
+    border-color: #3bc7c4;
+    margin: 0;
+    &.sub {
+        color: rgba(0, 0, 0, 0.4);
+    }
+}
+

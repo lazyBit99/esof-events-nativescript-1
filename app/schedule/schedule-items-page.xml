@@ -9,8 +9,14 @@
 
     <ListView items="{{ items }}">
         <ListView.itemTemplate>
-            <StackLayout orientation="horizontal">
-                <Label text="{{ name }}" textWrap="true"></Label>
+            <StackLayout orientation="vertical">
+                <Label fontSize="16" class="border-list" text="{{ nome }}" textWrap="true"></Label>
+                <Label
+                    fontSize="12"
+                    class="border-list sub"
+                    text="{{sub}}"
+                    textWrap="true">
+                </Label>
             </StackLayout>
         </ListView.itemTemplate>
     </ListView>
