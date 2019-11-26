@@ -7,7 +7,10 @@ const redata = data.map((item) => {
 
 function ScheduleItemsViewModel() {
     const viewModel = observableModule.fromObject({
-        items: redata
+        items: redata,
+        myGroupingFunc: function(item) {
+            return item.group
+        }
     });
 
     return viewModel;
