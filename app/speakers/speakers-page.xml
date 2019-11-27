@@ -2,12 +2,13 @@
     navigatingTo="onNavigatingTo"
     xmlns="http://schemas.nativescript.org/tns.xsd">
 
-    <ActionBar backgroundColor="#0cd1e8">
+    <ActionBar class="speakers">
         <Label text="Speakers"></Label>
     </ActionBar>
 
-    <GridLayout class="page__content">
-        <Label class="page__content-icon far" text="&#xf500;"></Label>
-        <Label class="page__content-placeholder" text="{{test}}"></Label>
-    </GridLayout>
+    <StackLayout orientation="vertical">
+        <Label text="{{test}}"></Label>
+        <Label text="{{subtitle}}"></Label>
+        <Button class="-primary" text="TAPP" tap="onTap" />
+    </StackLayout>
 </Page>

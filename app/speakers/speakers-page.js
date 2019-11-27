@@ -6,3 +6,7 @@ function onNavigatingTo(args) {
 }
 
 exports.onNavigatingTo = onNavigatingTo;
+
+exports.onTap = function() {
+    alert('TAPPED!!');
+}
