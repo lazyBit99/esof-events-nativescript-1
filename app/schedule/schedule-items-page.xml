@@ -7,19 +7,29 @@
         <Label text="Schedule"></Label>
     </ActionBar>
     <lv:RadListView
+        class="myList"
         items="{{ items }}"
         row="1"
         groupingFunction="{{ myGroupingFunc }}"
     >
         <lv:RadListView.itemTemplate>
             <StackLayout orientation="vertical">
-                <Label fontSize="16" class="border-list" text="{{ nome }}" textWrap="true"></Label>
-                <Label
-                    fontSize="12"
-                    class="border-list sub"
-                    text="{{sub}}"
-                    textWrap="true">
-                </Label>
+                <StackLayout class="wrap">
+                    <Label fontSize="16" class="border-list" text="{{ nome }}" textWrap="true"></Label>
+                    <Label
+                        fontSize="13"
+                        class="border-list sub"
+                        text="{{sub}}"
+                        textWrap="true">
+                    </Label>
+                    <StackLayout
+                        class="separator"
+                        height="2"
+                        marginTop="10"
+                        backgroundColor="#bdbdbd"
+                    >
+                    </StackLayout>
+                </StackLayout>
             </StackLayout>
         </lv:RadListView.itemTemplate>
     </lv:RadListView>
