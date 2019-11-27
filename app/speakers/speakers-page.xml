@@ -8,7 +8,5 @@
 
     <StackLayout orientation="vertical">
         <Label text="{{test}}"></Label>
-        <Label text="{{subtitle}}"></Label>
-        <Button class="-primary" text="TAPP" tap="onTap" />
     </StackLayout>
 </Page>
