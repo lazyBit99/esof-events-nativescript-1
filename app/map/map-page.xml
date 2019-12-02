@@ -6,8 +6,10 @@
         <Label text="Search"></Label>
     </ActionBar>
 
-    <GridLayout class="page__content">
-        <Label class="page__content-icon fas" text="&#xf279;"></Label>
-        <Label class="page__content-placeholder" text="{{test}}"></Label>
-    </GridLayout>
+    <StackLayout orientation="vertical">
+        <TextField height="80" text="{{nome}}" hint="Inserisci nome" color="orangered" backgroundColor="#ffffff" />
+        <TextField height="80" text="{{cognome}}" hint="Inserisci cognome" color="orangered" backgroundColor="#ffffff" />
+        <Label text="{{nome}}"></Label>
+        <Label text="{{cognome}}"></Label>
+       </StackLayout>
 </Page>
