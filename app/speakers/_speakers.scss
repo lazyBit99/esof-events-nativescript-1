@@ -12,6 +12,11 @@ Page.page-speakers {
         padding: 5 20;
         margin: 25 20;
         // class="cardView" > class="header"
+        .avatar {
+            border-radius: 50;
+            width: 36;
+            height: 36;
+        }
         .header {
             padding: 10;
         }

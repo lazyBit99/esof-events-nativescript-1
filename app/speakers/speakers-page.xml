@@ -11,9 +11,7 @@
         <StackLayout class="cardView" orientation="vertical">
             <StackLayout class="header" orientation="horizontal">
                 <Image
-                    borderRadius="50"
-                    width="36"
-                    height="36"
+                    class="avatar"
                     src="https://www.netclipart.com/pp/m/120-1205442_download-bart-simpson-head-png.png"
                     stretch="aspectFill"
                 />
@@ -29,21 +27,6 @@
                         backgroundColor="#bdbdbd"
                  />
                 <Label text="Bla bla blq bla" textWrap="true" />
-            </StackLayout>
-        </StackLayout>
-        <StackLayout class="cardView" orientation="vertical">
-            <StackLayout class="header" orientation="horizontal">
-                <Image
-                    borderRadius="50"
-                    width="36"
-                    height="36"
-                    src="https://www.netclipart.com/pp/m/120-1205442_download-bart-simpson-head-png.png"
-                    stretch="aspectFill"
-                />
-                <Label fontSize="16" text="Mario Bianchi" />
-            </StackLayout>
-            <StackLayout class="content" orientation="vertical">
-                <Label text="Colazione" textWrap="true" />
                 <StackLayout
                         class="separator"
                         height="2"
@@ -51,7 +34,6 @@
                         marginBottom="5"
                         backgroundColor="#bdbdbd"
                  />
-                <Label text="Bla bla blq bla" textWrap="true" />
             </StackLayout>
         </StackLayout>
     </StackLayout>
