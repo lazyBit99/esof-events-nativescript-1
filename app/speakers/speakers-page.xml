@@ -7,18 +7,19 @@
         <Label text="Speakers"></Label>
     </ActionBar>
 
-    <StackLayout orientation="vertical">
-        <StackLayout class="cardView" orientation="vertical">
+    <ListView items="{{ items }}">
+        <ListView.itemTemplate>
+            <StackLayout class="cardView" orientation="vertical">
             <StackLayout class="header" orientation="horizontal">
                 <Image
                     class="avatar"
-                    src="https://www.netclipart.com/pp/m/120-1205442_download-bart-simpson-head-png.png"
+                    src="{{ img }}"
                     stretch="aspectFill"
                 />
-                <Label fontSize="16" text="Mario Bianchi" />
+                <Label fontSize="16" text="{{ nome }}" />
             </StackLayout>
             <StackLayout class="content" orientation="vertical">
-                <Label text="Colazione" textWrap="true" />
+                <Label text="{{ interventocompleto }}" textWrap="true" />
                 <StackLayout
                         class="separator"
                         height="2"
@@ -26,7 +27,7 @@
                         marginBottom="5"
                         backgroundColor="#bdbdbd"
                  />
-                <Label text="Bla bla blq bla" textWrap="true" />
+                <Label text=" {{ desc }}" textWrap="true" />
                 <StackLayout
                         class="separator"
                         height="2"
@@ -36,5 +37,6 @@
                  />
             </StackLayout>
         </StackLayout>
-    </StackLayout>
+        </ListView.itemTemplate>
+    </ListView>
 </Page>
