@@ -3,7 +3,7 @@
     navigatingTo="onNavigatingTo"
     xmlns:lv="nativescript-ui-listview">
 
-    <ActionBar class="schedule">
+    <ActionBar>
         <Label text="Schedule"></Label>
     </ActionBar>
     <lv:RadListView
