@@ -28,5 +28,8 @@
             textWrap="true"
         />
 
+        <Button class="-outline -rounded-sm" text="Credits" tap="onTap" />
+
+
     </StackLayout>
 </Page>
