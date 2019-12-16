@@ -1,0 +1,20 @@
+<Page
+    class="info"
+    navigatingTo="onNavigatingTo"
+    xmlns="http://schemas.nativescript.org/tns.xsd">
+
+    <ActionBar backgroundColor="#ffce00">
+        <Label text="Credits"></Label>
+    </ActionBar>
+
+    <StackLayout orientation="vertical">
+        <Label text="Credits" class="title" fontSize="16" />
+        <ScrollView height="80%">
+          <Repeater items="{{ credits  }}" />
+        </ScrollView>
+
+        <Button class="-outline -rounded-sm" text="Back" tap="onTap" />
+
+
+    </StackLayout>
+</Page>
