@@ -5,32 +5,35 @@
 
     <ActionBar class="schedule">
         <Label text="Schedule"></Label>
+        <ActionItem tap="showDialog" ios.position="right" ios.systemIcon="17"> </ActionItem>
     </ActionBar>
-    <lv:RadListView
-        class="myList"
-        items="{{ items }}"
-        row="1"
-        groupingFunction="{{ myGroupingFunc }}"
-    >
-        <lv:RadListView.itemTemplate>
-            <StackLayout orientation="vertical">
-                <StackLayout class="wrap">
-                    <Label fontSize="16" class="border-list" text="{{ nome }}" textWrap="true"></Label>
-                    <Label
-                        fontSize="13"
-                        class="border-list sub"
-                        text="{{sub}}"
-                        textWrap="true">
-                    </Label>
-                    <StackLayout
-                        class="separator"
-                        height="2"
-                        marginTop="10"
-                        backgroundColor="#bdbdbd"
-                    >
+    <GridLayout visibility="{{isLogIn ? 'visible' : 'collapsed'}}">
+        <lv:RadListView
+            class="myList"
+            items="{{ items }}"
+            row="1"
+            groupingFunction="{{ myGroupingFunc }}"
+        >
+            <lv:RadListView.itemTemplate>
+                <StackLayout orientation="vertical">
+                    <StackLayout class="wrap">
+                        <Label fontSize="16" class="border-list" text="{{ nome }}" textWrap="true"></Label>
+                        <Label
+                            fontSize="13"
+                            class="border-list sub"
+                            text="{{sub}}"
+                            textWrap="true">
+                        </Label>
+                        <StackLayout
+                            class="separator"
+                            height="2"
+                            marginTop="10"
+                            backgroundColor="#bdbdbd"
+                        >
+                        </StackLayout>
                     </StackLayout>
                 </StackLayout>
-            </StackLayout>
-        </lv:RadListView.itemTemplate>
-    </lv:RadListView>
+            </lv:RadListView.itemTemplate>
+        </lv:RadListView>
+     </GridLayout>
 </Page>
