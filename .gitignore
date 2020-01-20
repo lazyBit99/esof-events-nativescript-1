@@ -32,3 +32,5 @@ typings/
 !.vscode/extensions.json
 
 config.js
+
+GoogleService-Info.plist

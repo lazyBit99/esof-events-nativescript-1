@@ -1,13 +1,23 @@
-const observableModule = require("tns-core-modules/data/observable");
-const data = require('./data');
-const redata = data.map((item) => {
-    item.interventocompleto = `${item.nome} — ${item.inizio} ${item.fine}`
-    return item
-});
-function SpeakerViewModel() {
-    const viewModel = observableModule.fromObject({
-       items: redata
+const firebase = require("nativescript-plugin-firebase/app");
+const ObservableArray = require("tns-core-modules/data/observable-array").ObservableArray;
+
+const myObservableArray = new ObservableArray();
+
+const firestore = firebase.firestore();
+const speakers = firestore.collection("speakers");
+speakers.get().then((document) => {
+    document.forEach((doc) => {
+        const item = doc.data()
+        item.interventocompleto = `${item.nome} — ${item.inizio} ${item.fine}`
+        myObservableArray.push(item);
     });
+});
+
+
+function SpeakerViewModel() {
+    const viewModel = {
+       items: myObservableArray
+    };
     return viewModel;
 }
 
