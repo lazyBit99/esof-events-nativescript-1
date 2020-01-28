@@ -108,6 +108,8 @@ exports.showFunctions = function () {
             .catch((errorMessage) => {
 
             })
+        } else {
+            viewModel.set('isCorrect', '')
         }
         console.log("Dialog result: " + r.result + ", text: " + r.text);
     })
