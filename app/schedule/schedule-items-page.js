@@ -21,8 +21,11 @@ firebase.login(
         console.log("User uid: " + user)
     })
     .catch(error => console.log("Trouble in paradise: " + error));
+// isolo il model
+const viewModel = new ScheduleItemsViewModel();
 
-const viewModel = new ScheduleItemsViewModel()
+const fn = firebase.functions.httpsCallable('helloNome')
+
 function onNavigatingTo(args) {
     const component = args.object;
     component.bindingContext = viewModel;
@@ -84,3 +87,21 @@ function showDialog () {
 }
 exports.onNavigatingTo = onNavigatingTo;
 exports.showDialog = showDialog;
+
+exports.showFunctions = function () {
+    fn('Firebase-from-Nativescript')
+    .then((mydata) => {
+        alert({
+            title: 'Firebase functions output',
+            message: mydata.messaggio,
+            okButtonText: mydata.status
+        })
+    } )
+    .catch((errorMessage) => {
+        alert({
+            title: "Errore",
+            message: errorMessage,
+            okButtonText: "Ok, grazie"
+        })
+    })
+}
