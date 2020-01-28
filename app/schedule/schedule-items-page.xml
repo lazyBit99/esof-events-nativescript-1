@@ -8,33 +8,12 @@
         <ActionItem tap="showFunctions" ios.position="left" ios.systemIcon="8"> </ActionItem>
         <ActionItem tap="showDialog" ios.position="right" ios.systemIcon="17"> </ActionItem>
     </ActionBar>
-    <GridLayout visibility="{{isLogIn ? 'visible' : 'collapsed'}}">
-        <lv:RadListView
-            class="myList"
-            items="{{ items }}"
-            row="1"
-            groupingFunction="{{ myGroupingFunc }}"
-        >
-            <lv:RadListView.itemTemplate>
-                <StackLayout orientation="vertical">
-                    <StackLayout class="wrap">
-                        <Label fontSize="16" class="border-list" text="{{ nome }}" textWrap="true"></Label>
-                        <Label
-                            fontSize="13"
-                            class="border-list sub"
-                            text="{{sub}}"
-                            textWrap="true">
-                        </Label>
-                        <StackLayout
-                            class="separator"
-                            height="2"
-                            marginTop="10"
-                            backgroundColor="#bdbdbd"
-                        >
-                        </StackLayout>
-                    </StackLayout>
-                </StackLayout>
-            </lv:RadListView.itemTemplate>
-        </lv:RadListView>
-     </GridLayout>
+    <GridLayout>
+        <GridLayout visibility="{{isCorrect == '1' ? 'visible' : 'collapsed'}}">
+            <Label text="Hai vinto!"  fontSize="24" color="white" textAlignment="center" backgroundColor="green"/>
+        </GridLayout>
+        <GridLayout visibility="{{isCorrect == '0' ? 'visible' : 'collapsed'}}">
+            <Label text="Non hai vinto!" fontSize="24" color="white" textAlignment="center" backgroundColor="red"/>
+        </GridLayout>
+    </GridLayout>
 </Page>

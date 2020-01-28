@@ -26,7 +26,8 @@ function ScheduleItemsViewModel() {
         myGroupingFunc: function(item) {
             return item.group
         },
-        isLogIn: false
+        isLogIn: false,
+        isCorrect: ''
     });
     return viewModel;
 }

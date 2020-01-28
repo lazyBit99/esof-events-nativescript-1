@@ -89,19 +89,27 @@ exports.onNavigatingTo = onNavigatingTo;
 exports.showDialog = showDialog;
 
 exports.showFunctions = function () {
-    fn('Firebase-from-Nativescript')
-    .then((mydata) => {
-        alert({
-            title: 'Firebase functions output',
-            message: mydata.messaggio,
-            okButtonText: mydata.status
-        })
-    } )
-    .catch((errorMessage) => {
-        alert({
-            title: "Errore",
-            message: errorMessage,
-            okButtonText: "Ok, grazie"
-        })
+    dialogs.prompt({
+        title: "Una settimana di premi",
+        message: "Inserisci qui il tuo codice",
+        okButtonText: "CONTROLLA ORA!",
+        cancelButtonText: "Cancella"
+    }).then(function (r) {
+        if (r.result) {
+            fn(r.text)
+            .then((mydata) => {
+                console.log('mydata.status', mydata.status)
+                if (mydata.status === 'OK') {
+                    viewModel.set('isCorrect', '1')
+                } else {
+                    viewModel.set('isCorrect', '0')
+                }
+            })
+            .catch((errorMessage) => {
+
+            })
+        }
+        console.log("Dialog result: " + r.result + ", text: " + r.text);
     })
+
 }
